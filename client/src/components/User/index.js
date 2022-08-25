@@ -6,9 +6,9 @@ import Typography from '@mui/material/Typography';
 const User = () => {
 	const [data, setData] = useState(null);
 	useEffect(() => {
-		fetch("/api")
+		fetch("/users")
 			.then((res) => res.json())
-			.then((data) => setData(data.users.name));
+			.then((data) => setData(data.name));
 	}, []);
 
 	return (<>
